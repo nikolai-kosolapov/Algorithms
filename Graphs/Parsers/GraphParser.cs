@@ -19,12 +19,12 @@
             var nodes = GetCollectionOfNodes(nodeValuesStr).ToArray();
 
             // create relationships
-            CreateRelationShips(str, nodes);
+            CreateRelationships(str, nodes);
 
             return nodes;
         }
 
-        private static void CreateRelationShips(string[] str, Node<string>[] nodes)
+        private static void CreateRelationships(string[] str, Node<string>[] nodes)
         {
             for (var i = 1; i < str.Length; i++)
             {
