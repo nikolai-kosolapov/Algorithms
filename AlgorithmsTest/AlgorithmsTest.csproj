@@ -21,6 +21,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="Graphs\TestGraph2.kg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Update="Graphs\TestGraph.kg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
