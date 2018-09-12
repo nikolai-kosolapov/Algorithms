@@ -29,7 +29,7 @@
             for (var i = 1; i < str.Length; i++)
             {
                 var adjacentsStr = str[i];
-                var relations = adjacentsStr.Split(' ').Select(x => int.Parse(x));
+                var relations = adjacentsStr.Split(' ').Where(x => x != string.Empty).Select(x => int.Parse(x));
                 foreach (var relation in relations)
                 {
                     nodes[i - 1].Adjacents.Add(nodes[relation]);

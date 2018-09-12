@@ -47,5 +47,24 @@ namespace AlgorithmsTest.Graphs
             // Assert
             Assert.Equal("Array should have more than one string", ex.Message);
         }
+
+        [Fact]
+        public void Should_WorkWithEmptyStrings()
+        {
+            // Arrange
+
+            // Load strings from the file
+            var path = "./Graphs/TestGraph2.kg";
+            var str = File.ReadAllLines(path);
+
+            // Create parser
+            var parser = new GraphParser();
+
+            // Act
+            var result = parser.GetStringGraphByString(str);
+
+            // Assert
+            Assert.Equal(32, result.Count);
+        }
     }
 }
