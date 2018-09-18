@@ -3,13 +3,13 @@
     using System.Collections.Generic;
     using Graphs.Models;
 
-    public abstract class DFSVisitor<T>
+    public abstract class DFSVisitor<T> : GraphVisitor<T>, IGraphVisitor<T>
     {
         private List<Node<T>> visited = new List<Node<T>>();
 
         private bool result = false;
 
-        public void Visit(Node<T> node)
+        public override void Visit(Node<T> node)
         {
             this.result = this.VisitNode(node);
             this.visited.Add(node);
@@ -28,7 +28,5 @@
             }
 
         }
-
-        protected abstract bool VisitNode(Node<T> node);
     }
 }
